@@ -1,0 +1,89 @@
+@import "../../App.scss";
+
+.header {
+    position: fixed;
+
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 9999;
+
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: .65rem;
+
+        background-color: $red-color;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.6rem 1rem .75rem;
+}
+
+.nav__list {
+    display: flex;
+
+    gap: 2.5rem;
+    font-weight: $font-normal;
+}
+
+.nav__list__home {
+    position: relative;
+    align-items: center;
+
+    .nav__list__home-new {
+        position: absolute;
+        top: -.7rem;
+        left: 2.4rem;
+    
+        text-transform: uppercase;
+        font-size: $smaller-font-size;
+        font-weight: $font-medium;
+        color: $red-color;
+    }
+
+    .nav__list__home-arrow {
+        position: absolute;
+        top: .4rem;
+        left: 3.4rem;
+
+        cursor: pointer;
+        color: $red-color;
+    }
+
+    .nav__list__home-menu {
+        position: absolute;
+        left: -.5rem;
+        top: 1.7rem;
+        width: 10rem;
+        padding: .5rem 1rem;
+
+        border: 0.5px solid #DEDBDB;
+        border-top: 3px solid $red-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2px 2px 5px 5px;
+
+        font-size: $smaller-font-size;
+        background-color: $container-color;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
+
+.show-menu {
+    display: none;
+}
+
+.scroll-header {
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, .55);
+}
+
