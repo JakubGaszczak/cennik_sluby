@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../css/header.css"
 import logo from "../../assets/logo.png"
 
 function Header() {
 
   const [toggleMenu, setTogleMenu] = useState(false)
+  const [mobileNav, setMobileNav] = useState(false)
 
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header")
@@ -12,6 +13,10 @@ function Header() {
     if (this.scrollY >= 80) header.classList.add("scroll-header")
     else header.classList.remove("scroll-header")
   })
+
+  const closeMobileNav = () => {
+    setMobileNav(false)
+  }
 
   return (
     <header className='header'>
@@ -21,10 +26,10 @@ function Header() {
             </a>
 
             <div>
-              <ul className='nav__list'>
+              <ul className={mobileNav ? "nav__list nav__list__mobile-show" : "nav__list"}>
 
-                <li className='nav__list__home'>
-                  <a href="#home">Home</a>
+                <li className='nav__list__home nav__list-item'>
+                  <a onClick={closeMobileNav} href="#home">Home</a>
                   <i onClick={() => {setTogleMenu(!toggleMenu)
                   }} class="nav__list__home-arrow fa-solid fa-angle-down"></i>
                   <span className='nav__list__home-new'>new</span>
@@ -35,31 +40,45 @@ function Header() {
                   </ul>
                 </li>
 
-                <li>
-                  <a href="#about">O nas</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} href="#about">O nas</a>
                 </li>
 
-                <li>
-                  <a href="#price__list">Cennik</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} href="#price__list">Cennik</a>
                 </li>
 
-                <li>
-                  <a href="#packages">Pakiety</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} href="#packages">Pakiety</a>
                 </li>
 
-                <li>
-                  <a href="additional__services">Dodatkowe usługi</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} href="additional__services">Dodatkowe usługi</a>
                 </li>
 
-                <li>
-                  <a href="#contact">Kontakt</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} href="#contact">Kontakt</a>
                 </li>
 
-                <li>
-                  <a className='button' href="#">Sprawdź termin</a>
+                <li className='nav__list-item'>
+                  <a onClick={closeMobileNav} className='button' href="#">Sprawdź termin</a>
                 </li>
               </ul>
             </div>
+
+            {mobileNav ? 
+              <div className='nav__mobile-close'>
+                <i onClick={() => {
+                  setMobileNav(!mobileNav)
+                  setTogleMenu(false)
+                }} class="fa-solid fa-xmark"></i>
+              </div>
+            :
+              <div className='nav__mobile-toggle'>
+                <i onClick={() => setMobileNav(!mobileNav)} className="nav__hamburger fa-solid fa-bars"></i>
+              </div>
+            }
+
         </nav>
     </header>
   )

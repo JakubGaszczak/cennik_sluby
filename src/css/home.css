@@ -104,3 +104,61 @@ img {
     padding-right: 0rem;
   }
 }
+.home {
+  padding: 14rem 0 13.5rem;
+  margin: 0 2rem;
+}
+.home .home__container {
+  position: relative;
+}
+
+.home__title h4 {
+  color: #F7012F;
+}
+
+.home__text {
+  max-width: 35rem;
+  margin: 1rem 0 2rem;
+}
+
+.button-transparent {
+  margin: 0 2rem;
+  padding: 0.7rem 3rem;
+}
+
+/* Absolute images */
+.home__images img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.grayVector {
+  left: calc(50% + 22rem);
+  top: calc(50% + 1rem);
+}
+
+.redVector {
+  left: calc(50% + 22rem);
+  top: calc(50% + 3rem);
+}
+
+.coupleDancing {
+  max-width: 25rem;
+  left: calc(50% + 15em);
+  top: calc(50% + 3em);
+}
+
+@media screen and (max-width: 576px) {
+  .home {
+    padding: 10rem 0 2rem;
+    margin: 0rem;
+  }
+  .button-transparent {
+    margin: 0 0.6rem;
+  }
+  .home__container {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}

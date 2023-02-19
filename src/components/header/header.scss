@@ -7,7 +7,8 @@
     top: 0;
     left: 0;
 
-    z-index: 9999;
+    background-color: $container-color;
+    z-index: $big-index;
 
     &::before {
         content: "";
@@ -27,11 +28,29 @@ nav {
     padding: 1.6rem 1rem .75rem;
 }
 
+.nav__logo {
+    width: 9rem;
+}
+
+.nav__mobile-toggle,
+.nav__mobile-close {
+    display: none;
+    font-size: $normal-font-size;
+
+    cursor: pointer;
+}
+
 .nav__list {
     display: flex;
+    align-items: center;
 
     gap: 2.5rem;
+    transition: .8s;
     font-weight: $font-normal;
+
+    .nav__list-item {
+        max-width: 15rem;
+    }
 }
 
 .nav__list__home {
@@ -40,20 +59,21 @@ nav {
 
     .nav__list__home-new {
         position: absolute;
-        top: -.7rem;
-        left: 2.4rem;
+        top: -.4rem;
+        left: 2.5rem;
     
         text-transform: uppercase;
-        font-size: $smaller-font-size;
-        font-weight: $font-medium;
+        font-size: $tiny-font-size;
+        font-weight: $font-bold;
         color: $red-color;
     }
 
     .nav__list__home-arrow {
         position: absolute;
-        top: .4rem;
+        top: .45rem;
         left: 3.4rem;
 
+        font-size: $smaller-font-size;
         cursor: pointer;
         color: $red-color;
     }
@@ -86,4 +106,61 @@ nav {
 .scroll-header {
     box-shadow: 0px -1px 4px rgba(0, 0, 0, .55);
 }
+
+@media screen and (max-width: 1050px) {
+    .nav__hamburger {
+        display: block;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        
+        position: fixed;
+        left: 0;
+        right: -200rem;
+        top: 6.1rem;
+        height: 100vh;
+        width: 100vw;
+        
+        padding-top: 2rem;
+        margin: auto;
+        text-align: center;
+        background-color: $container-color;
+    }
+
+    .nav__list__mobile-show {
+        right: 0;
+    }
+
+    .nav__mobile-toggle,
+    .nav__mobile-close {
+        display: block;
+    }
+
+    .nav__list__home-new,
+    .nav__list__home-arrow {
+        right: -1rem;
+    }
+
+    .nav__list__home {
+        position: relative;
+        
+        .nav__list__home-menu {
+            position: absolute;
+            font-size: $smaller-font-size;
+            left: -2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        padding-top: 2rem;
+    }
+
+    
+}
+
+
 

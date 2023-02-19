@@ -21,6 +21,10 @@ $h1-font-size: 3rem;
 $h2-font-size: 2rem;
 $h3-font-size: 1.5rem;
 
+$big-index: 9999;
+$normal-index: 999;
+$small-index: 99;
+
 
 // Base 
 
@@ -42,6 +46,10 @@ h1, h2, h3 {
 ul {
     list-style: none;
     color: $text-color;
+
+    li:hover {
+        transform: scale(105%);
+    }
 }
 
 a {
@@ -62,11 +70,22 @@ img {
     font-weight: $font-bold;
 
     padding: .8rem 1.7rem;
+
     border-radius: 3.625rem;
 
     cursor: pointer;
     border: none;
     outline: none;
+
+    &:hover {
+        transform: scale(105%);
+    }
+}
+
+.button-transparent {
+    color: $red-color;
+    border: 2px solid $red-color;
+    background: none;
 }
 
 .section {
@@ -103,30 +122,16 @@ img {
     gap: 1.5rem;
 }
 
-
-// For large devices 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
     .container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-// For medium devices 
-@media screen and (max-width: 768px) {
-    body {
-        margin: 0 0 5rem 0;
-    }
-
-    .section {
-        padding: 2rem 0 4rem;
-    }
-}
-
-// For small devices 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 576px) {
     .container {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
 }
