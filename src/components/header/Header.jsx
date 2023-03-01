@@ -31,7 +31,7 @@ function Header() {
                 <li className='nav__list__home nav__list-item'>
                   <a onClick={closeMobileNav} href="#home">Home</a>
                   <i onClick={() => {setTogleMenu(!toggleMenu)
-                  }} class="nav__list__home-arrow fa-solid fa-angle-down"></i>
+                  }} className="nav__list__home-arrow fa-solid fa-angle-down"></i>
                   <span className='nav__list__home-new'>new</span>
                   <ul className={toggleMenu ? "nav__list__home-menu" : "nav__list__home-menu show-menu"}>
                     <li>Main</li>
@@ -45,7 +45,7 @@ function Header() {
                 </li>
 
                 <li className='nav__list-item'>
-                  <a onClick={closeMobileNav} href="#price__list">Cennik</a>
+                  <a onClick={closeMobileNav} href="#priceList">Cennik</a>
                 </li>
 
                 <li className='nav__list-item'>
@@ -53,11 +53,7 @@ function Header() {
                 </li>
 
                 <li className='nav__list-item'>
-                  <a onClick={closeMobileNav} href="additional__services">Dodatkowe usługi</a>
-                </li>
-
-                <li className='nav__list-item'>
-                  <a onClick={closeMobileNav} href="#contact">Kontakt</a>
+                  <a onClick={closeMobileNav} href="#footer">Kontakt</a>
                 </li>
 
                 <li className='nav__list-item'>
@@ -71,7 +67,7 @@ function Header() {
                 <i onClick={() => {
                   setMobileNav(!mobileNav)
                   setTogleMenu(false)
-                }} class="fa-solid fa-xmark"></i>
+                }} className="fa-solid fa-xmark"></i>
               </div>
             :
               <div className='nav__mobile-toggle'>

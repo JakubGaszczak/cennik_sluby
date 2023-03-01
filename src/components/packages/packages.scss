@@ -1,0 +1,103 @@
+@import "../../App.scss";
+
+.packages {
+    background: linear-gradient(180.02deg, #040120 33.84%, #053172 115.6%);
+    color: white;
+}
+
+.packages__package {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem 0;
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+
+    &__img {
+        max-width: 13rem;
+        height: 100%;
+        margin: 1rem;
+
+        @media screen and (max-width: 992px) {
+            max-width: 10rem;
+        }
+    }
+
+    &__content {
+        max-width: 20rem;
+
+        span {
+            font-weight: $font-bold;
+        }
+    }
+
+    &__subtitle {
+        font-size: $normal-font-size;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: .8rem 0;
+        
+        background-color: $red-color;
+        color: white;
+        padding: .1rem 1.2rem;
+        border-radius: .625rem;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: $small-font-size;
+    }
+
+    &__offers {
+        font-size: $small-font-size;
+        margin: 1rem 0 1.5rem 1rem;
+
+        li {
+            margin: .4rem 0;
+
+            &::before {
+                content: "\2022";
+                margin-right: .3rem;
+                color: #74E9FF;
+            }
+        }
+    }
+
+    &__cost {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        border: none;
+        color: white;
+        background: none;
+        font-size: $small-font-size;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        cursor: pointer;
+
+        i {
+            margin-right: .3rem;
+        }
+    }
+
+    &__price {
+        font-size: $normal-font-size;
+        font-weight: $font-bold;
+        color: #74E9FF;
+    }
+}
+
+/* row reverse */
+.row-reverse {
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+}

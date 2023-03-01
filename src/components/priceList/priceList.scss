@@ -1,0 +1,163 @@
+@import "../../App.scss";
+
+.priceList {
+    background: linear-gradient(180deg, rgba(241, 241, 241, 0) 0%, #B8F4FF 100%);
+}
+
+.priceList__title {
+    gap: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    span {
+        width: 0.125rem;
+        height: 4.375rem;
+        background: #E2DDDD;
+    }
+
+    p {
+        padding: .1rem .8rem;
+        border-radius: .4rem;
+
+        font-size: $small-font-size;
+        font-weight: $font-bold;
+        background-color: $text-color;
+        color: white;
+    }
+}
+
+.priceList__table {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(16.8rem, 20rem) repeat(4, minmax(9rem, 12rem));
+
+    p {
+        height: 4.5rem;
+        color: $table-text-color;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F1F1F1;
+        }
+
+        @media screen and (max-width: 576px) {
+            height: 3.3rem;
+        }
+    }
+
+    span {
+        font-weight: $font-bold;
+    }
+
+    i {
+        font-size: $normal-font-size;
+    }
+
+    .fa-xmark {
+        color: #D6D6D6;
+    }
+
+    @media screen and (max-width: 1000px) {
+        overflow: scroll;
+        justify-content: left;
+    }
+}
+
+/* Column Data Styles */
+
+.column {
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        &:nth-child(1), &:nth-child(9) {
+            font-size: $normal-font-size;
+
+            @media screen and (max-width: 576px) {
+                font-size: $small-font-size;
+            }
+        }
+    }
+}
+
+.column-options {
+    border: .625rem solid #ACF2FF;
+    border-radius: 1.875rem 0 0 1.875rem;
+
+    @media screen and (max-width: 576px) {
+        border: .4rem solid #ACF2FF;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        padding-left: .7rem;
+
+        &:nth-child(1), &:nth-child(9) {
+            font-size: $normal-font-size;
+        }
+    }
+}
+
+.column-1 {
+    border: .625rem solid #C6F6FF;
+
+    @media screen and (max-width: 576px) {
+        border: .4rem solid #C6F6FF;
+    }
+}
+
+.column-2 {
+    border: .625rem solid #74E9FF;
+
+    @media screen and (max-width: 576px) {
+        border: .4rem solid #74E9FF;
+    }
+}
+
+.column-3 {
+    border: .625rem solid #00D5FD;
+
+    @media screen and (max-width: 576px) {
+        border: .4rem solid #00D5FD;
+    }
+}
+
+.column-4 {
+    border: .625rem solid $red-color;
+    border-radius: 0 1.875rem 1.875rem 0;
+
+    @media screen and (max-width: 576px) {
+        border: .4rem solid $red-color;
+    }
+
+    span {
+        color: $red-color;
+    }
+}
+
+
+.priceList__content {
+    flex-direction: column;
+    text-align: center;
+    
+    &__text {
+        max-width: 62rem;
+        margin: 2rem 0;
+
+        @media screen and (max-width: 576px) {
+            text-align: left;
+        }
+    }
+
+    &__big-text {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+}
+
+

@@ -4,10 +4,11 @@ import "../../css/home.css"
 import greyVector from "../../assets/grayVector.png"
 import redVector from "../../assets/redVector.png"
 import coupleDancing from "../../assets/coupleDancing.png"
-// import greyVector from "../../assets/grayVector.png"
-// import greyVector from "../../assets/grayVector.png"
-// import greyVector from "../../assets/grayVector.png"
-// import greyVector from "../../assets/grayVector.png"
+import redCircle from "../../assets/redCircle.png"
+import smallWater from "../../assets/smallWater.png"
+import smallEarth from "../../assets/smallEarth.png"
+import smallClouds from "../../assets/smallClouds.png"
+import smallBlackhole from "../../assets/smallBlackhole.png"
 
 function Home() {
   return (
@@ -32,6 +33,11 @@ function Home() {
           <img className='grayVector' src={greyVector} alt="gray vector" />
           <img className='redVector' src={redVector} alt="red vector" />
           <img className='coupleDancing' src={coupleDancing} alt="couple dancing" />
+          <img className='redCircle' src={redCircle} alt="red circle" />
+          <img className='smallWater' src={smallWater} alt="small water" />
+          <img className='smallEarth' src={smallEarth} alt="small earth" />
+          <img className='smallClouds' src={smallClouds} alt="small clouds" />
+          <img className='smallBlackhole' src={smallBlackhole} alt="small Blackhole" />
         </div>
       </div>
     </section>

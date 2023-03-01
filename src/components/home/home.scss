@@ -1,12 +1,9 @@
 @import "../../App.scss";
 
 .home {
-    padding: 14rem 0 13.5rem;
-    margin: 0 2rem;
-
-    .home__container {
-        position: relative;
-    }
+    padding: 14rem 2rem 14rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .home__title {
@@ -16,7 +13,7 @@
 }
 
 .home__text {
-    max-width: 35rem;
+    max-width: 33.5rem;
     margin: 1rem 0 2rem;
 }
 
@@ -34,24 +31,67 @@
 }
 
 .grayVector {
-    left: calc(50% + 22rem);
+    max-width: 52rem;
+    left: calc(50% + 21rem);
     top: calc(50% + 1rem);
 }
 
 .redVector {
+    max-width: 52rem;
     left: calc(50% + 22rem);
     top: calc(50% + 3rem);
 }
 
 .coupleDancing {
-    max-width: 25rem;
+    max-width: 22rem;
     left: calc(50% + 15em);
     top: calc(50% + 3em);
 }
 
+.redCircle {
+    max-width: 4.5rem;
+    left: calc(50% + 37rem);
+    top: calc(50% + 20.5rem);
+}
+
+.smallWater {
+    max-width: 2rem;
+    left: calc(50% - 14rem);
+    top: calc(50% - 13rem);
+}
+
+.smallEarth {
+    max-width: 3.5rem;
+    left: calc(50% - 7rem);
+    top: calc(50% - 7rem);
+}
+
+.smallClouds {
+    max-width: 5.5rem;
+    left: calc(50% - 9rem);
+    top: calc(50% + 9rem);
+}
+
+.smallBlackhole {
+    max-width: 9rem;
+    left: calc(50% - 20rem);
+    top: calc(50% + 21rem);
+}
+
+@media screen and (max-width: 1200px) {
+    .home {
+        padding-top: 12rem;
+        padding-bottom: 6rem;
+    }
+
+    .home__images {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .home {
-        padding: 10rem 0 2rem;
+        padding: 9rem 0rem 0rem;
         margin: 0rem;
     }
 

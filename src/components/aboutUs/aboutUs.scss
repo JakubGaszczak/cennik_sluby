@@ -1,7 +1,103 @@
 @import "../../App.scss";
 
 .aboutUs {
-    // background: linear-gradient(178.59deg, #FFFFFF 6.76%, #ACF2FF 196.33%);
-    background: red;
+    padding-top: 3rem;
+    background: linear-gradient(178.59deg, #FFFFFF 6.76%, #ACF2FF 196.33%);
+}
+
+.aboutUs__top {
+    padding-bottom: 3rem;
+}
+
+.aboutUs__top__title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.aboutUs__top__content {
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.aboutUs__top__text {
+    max-width: 42rem;
+}
+
+.aboutUs__top__certificates {
+    text-align: center;
+
+    .certificates {
+        gap: 2rem;
+    }
+
+    button {
+        margin-top: 2rem;
+        background-color: #74E9FF;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .aboutUs__top__content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutUs__top__certificates {
+        .certificates {
+            gap: 0.5rem;
+
+            img {
+                width: 6rem;
+            }
+        }
+    }
+}
+
+
+.aboutUs__bottom {
+    padding-top: 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.aboutUs__bottom_photo img {
+    max-width: 28rem;
+}
+
+.aboutUs__bottom__content {
+    max-width: 37rem;
+
+    .aboutUs__bottom__text-1 {
+        padding: .5rem 0;
+    }
+
+    .aboutUs__bottom__text-2 {
+        padding-bottom: 2rem;
+    }
+
+    .aboutUs__bottom__span {
+        display: block;
+
+        text-align: center;
+        font-size: $smaller-font-size;
+        color: #6FB6C5;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .aboutUs__bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutUs__bottom_photo img {
+        max-width: 20rem;
+    }
 }
 

@@ -1,0 +1,92 @@
+@import "../../App.scss";
+
+.footer {
+    background: linear-gradient(180deg, #03011E 38.83%, #08014A 127.7%); 
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+    }
+}
+
+.footer__content {
+    max-width: 20rem;
+
+    &__subtitle {
+        color: $red-color;
+    }
+
+    &__title {
+        margin: .2rem 0 1.5rem 0;
+        color: white;
+    }
+
+    &__email, &__phone {
+        display: flex;
+        gap: 4rem;
+
+        font-size: $normal-font-size;
+
+        p {
+            color: #74E9FF;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+    &__phone {
+        margin: 1rem 0;
+        gap: 2.5rem;
+    }
+
+    &__socials {
+        i {
+            padding: 1rem;
+            margin: 0 .5rem;
+            width: 50px;
+            height: 50px;
+            
+            
+            text-align: center;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(105%);
+            }
+        }
+    }
+
+    &__button {
+        margin: 2rem 0;
+    }
+
+    &__img img {
+        max-width: 25rem;
+
+        @media screen and (max-width: 850px) {
+            max-width: 20rem;
+        }
+    }
+}
+
+.footer__rights {
+    margin-top: 7rem;
+    text-align: center;
+    color: #002761;
+
+    span {
+        color: #74E9FF;
+        font-weight: $font-bold;
+    }
+}

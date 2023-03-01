@@ -28,8 +28,8 @@ nav {
     padding: 1.6rem 1rem .75rem;
 }
 
-.nav__logo {
-    width: 9rem;
+.nav__logo img {
+    width: 9.2rem;
 }
 
 .nav__mobile-toggle,
@@ -49,7 +49,11 @@ nav {
     font-weight: $font-normal;
 
     .nav__list-item {
-        max-width: 15rem;
+        max-width: 15rem; 
+
+        &:hover {
+            transform: scale(105%);
+        }
     }
 }
 
@@ -159,7 +163,9 @@ nav {
         padding-top: 2rem;
     }
 
-    
+    .nav__logo img {
+        width: 8rem;
+    }
 }
 
 

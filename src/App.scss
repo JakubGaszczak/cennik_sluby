@@ -4,6 +4,7 @@
 
 $title-color: #200120;
 $text-color: #200120;
+$table-text-color: #17105B;
 $container-color: #fff;
 $red-color: #F7012F;
 $body-font: "Poppins", sans-serif;
@@ -34,6 +35,10 @@ $small-index: 99;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $body-font;
 }
@@ -45,11 +50,6 @@ h1, h2, h3 {
 
 ul {
     list-style: none;
-    color: $text-color;
-
-    li:hover {
-        transform: scale(105%);
-    }
 }
 
 a {
@@ -58,9 +58,8 @@ a {
     color: $text-color;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+button:hover {
+    transform: scale(105%);
 }
 
 .button {
@@ -89,7 +88,7 @@ img {
 }
 
 .section {
-    padding: 5rem 0 2rem;
+    padding: 6rem 2rem 3rem;
 }
 
 .section-title {
@@ -117,6 +116,16 @@ img {
     margin-right: auto;
 }
 
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid {
     display: grid;
     gap: 1.5rem;
@@ -133,5 +142,9 @@ img {
     .container {
         padding-left: 0rem;
         padding-right: 0rem;
+    }
+
+    .section {
+        padding: 5rem 0rem 2rem;
     }
 }

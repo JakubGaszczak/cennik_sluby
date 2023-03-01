@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -17,11 +21,6 @@ h1, h2, h3 {
 
 ul {
   list-style: none;
-  color: #200120;
-}
-ul li:hover {
-  -webkit-transform: scale(105%);
-          transform: scale(105%);
 }
 
 a {
@@ -30,9 +29,9 @@ a {
   color: #200120;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+button:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
 }
 
 .button {
@@ -58,7 +57,7 @@ img {
 }
 
 .section {
-  padding: 5rem 0 2rem;
+  padding: 6rem 2rem 3rem;
 }
 
 .section-title {
@@ -87,6 +86,24 @@ img {
   margin-right: auto;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -102,5 +119,8 @@ img {
   .container {
     padding-left: 0rem;
     padding-right: 0rem;
+  }
+  .section {
+    padding: 5rem 0rem 2rem;
   }
 }
